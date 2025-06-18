@@ -29,6 +29,10 @@ function filter_products(filters):
             match_filter = false
         if weight in filters and product.weight != filters.weight:
             match_filter = false
+        if color in filters and product.color != filters.color:
+            match_filter = false
+        if brand in filters and product.brand != filters.brand:
+            match_filter = false
         
         if match_filter:
             append product to filtered_list # All matched filters will be shown in the product description
