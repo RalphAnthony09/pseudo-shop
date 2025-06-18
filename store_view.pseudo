@@ -1,18 +1,24 @@
 # Displays product listings
 
-# Function to display all products:
-function display_products():
-    print "=== Product List==="
+import product_list from product model.pseudo #import data from relevant script
 
-    for each product in product_list:
-        print "Name: " + product.name
-        print "Description:"
-        print "Width: " + product.width
-        print "Height: " + product.height
-        print "Length: " + product.length
-        print "Weight: " + product.weight
-        print "Color: " + product.color
-        print "Brand: " + product.brand
+# Function to display all products:
+function display_products(filters):
+
+    product_list = product_list
+
+    if(filters): #determines which list of products to pull from; if filters are present then filtered list is geerated, else all products displayed
+        product_list = filter_products(filters)
+        
+    print "=== Product List===" #better formatting for text output
+    for product in product_list:
+        fprint(f"Product Information:\n"
+                f"Name: {product.name}\n"
+                f"Dimensions: {product.length} x {product.width} x {product.height} inches\n" 
+                f"Weight: {product.weight} kg\n"
+                f"Color: {product.color}\n"
+                f"Brand: {product.brand}\n")
+        print "=========="
 
 # Function to filter products by given attributes
 function filter_products(filters):
@@ -37,5 +43,4 @@ function filter_products(filters):
         if match_filter:
             append product to filtered_list # All matched filters will be shown in the product description
         
-    return filtered_list # Displays the filtered list
-
+    return filtered_list #Returns products matching given filters
