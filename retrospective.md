@@ -6,12 +6,16 @@
 
 ## 1. How did you divide the work between you and your partner?
 _(Who worked on which features? How was the work assigned or negotiated?)_
+We split the features evenly: Tyrell took registration and storefront while Ralph took product management and filtering. We had a Google doc which helped us track the required things we still need. From there we had constant communication to help resolve wach others errors if there were any.
 
 ## 2. What Git strategies or commands helped you most during the project?
 _(E.g., branching, rebasing, frequent commits, etc.)_
 
+Of course we used the standard pull, push,add etc. However, we also had to rebase our branches especially if the feature was connected to another feature a different person was working on. For example when store_view was updated since the other person's changes we merged to main, we had to rebase our current branch to account for the updates each person created.
+
 ## 3. Describe a merge conflict you encountered. What caused it and how did you resolve it?
 _(Include any lessons learned or techniques used to resolve the issue.)_
+We encountered conflicts especially in the store_view.pseudo. Since it was a file the multiple features were utilizing, it was contantly being updated with new code. So when we had to rebase and pull each others' changes, we had to resolve the conflicts. Through communication and VScode's features of being able to visualize the incoming and local versions, we were able to resolve everything
 
 ## 4. What were the biggest challenges you faced as a team?
 _(This can include communication, Git usage, or coordination.)_
