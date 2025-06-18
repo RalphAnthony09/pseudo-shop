@@ -11,6 +11,20 @@
 #     brand: "Generic"
 # }
 
-# Placeholder product list
+# Product list
 product_list = []
+
+# Function to add product to the list
+function add_product(name, width, height, length, weight, color, brand):
+    product = {
+        name: name,
+        width: width,
+        height: height,
+        length: length,
+        weight: weight,
+        color: color,
+        brand: brand,
+    }
+
+append product to product_list
 
