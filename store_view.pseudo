@@ -25,6 +25,10 @@ function filter_products(filters):
             match_filter = false
         if height in filters and product.height != filters.height:
             match_filter = false
+        if length in filters and product.length != filters.length:
+            match_filter = false
+        if weight in filters and product.weight != filters.weight:
+            match_filter = false
         
         if match_filter:
             append product to filtered_list # All matched filters will be shown in the product description
