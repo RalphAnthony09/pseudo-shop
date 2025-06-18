@@ -14,3 +14,20 @@ function display_products():
         print "Color: " + product.color
         print "Brand: " + product.brand
 
+# Function to filter products by given attributes
+function filter_products(filters):
+    filtered_list = []
+
+    for each product in product_list:
+        match_filter = true
+
+        if width in filters and product.width != filters.width:
+            match_filter = false
+        if height in filters and product.height != filters.height:
+            match_filter = false
+        
+        if match_filter:
+            append product to filtered_list # All matched filters will be shown in the product description
+        
+    return filtered_list # Displays the filtered list
+
