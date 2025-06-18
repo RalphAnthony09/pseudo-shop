@@ -1,13 +1,15 @@
 # Handles user signup and login
 
-Class user:
+#Class for user object
+Class User:
     def __init__(self, name,email,password):
-    self.name = name
-    self.email = email
-    self.password = password
+        self.name = name
+        self.email = email
+        self.password = password
 
 # Placeholder function signatures:
 # function create_user(name, email, password)
+    new_user = User
 
 # function login_user(email, password)
 
