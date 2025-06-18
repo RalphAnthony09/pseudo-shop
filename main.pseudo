@@ -1,8 +1,32 @@
 # Main entry point
 
+#imports all our functions from other pseudo code files
+import * from produc_model.pseudo
+import * from store_view.pseudo
+import * from user_controller.pseudo
+
 # This file ties together all components of the pseudo-shop
 # Feel free to modify this to simulate application flow
 
 # Run the app
 print "Welcome to the Pseudo Shop!"
 
+choice = input("Login or create an account")
+
+if choice == login: 
+    email = input()
+    password = input()
+    login_user(email,password) #function imported from user_controller
+else:
+    name = input()
+    email = input()
+    password = input()
+    create_user(name, email, password) #function imported from user_controller
+
+
+display_product() #function imported from store_view; displays all products
+
+print("add filter")
+filters = input()
+
+display_product(filters) #function imported from store_view; displays all products according to filters
