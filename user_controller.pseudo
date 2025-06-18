@@ -2,25 +2,26 @@
 
 #Class for user object
 Class User:
-    def __init__(self, name,email,password):
+    def __init__(self, name,email,password): #instantiator funtion for user
         self.name = name
         self.email = email
         self.password = password
     
-    def check_password(self, password_input):
+    def check_password(self, password_input): #checks if inputted password matches current user's
         return self.password == password_input
 
 # Placeholder function signatures:
-# function create_user(name, email, password)
-    new_user = User(name, email, password)
+function create_user(name, email, password)
+    new_user = User(name, email, password) # Instatiates user object with input given
 
-# function login_user(email, password)
+#Function that handles user login
+function login_user(email, password)
     for user in user_database;
-        if email == user.email:
+        if email == user.email: #Allows login if email and password matches a user
             if password == user.check_password:
                 return "Login Successful"
             else:
                 return "Email or password is wrong"
     
-    return "Email is password is wrong"
+    return "Email or password is wrong" #Same error message so that if someone is trying to break into an account they wont know if email or password is wrong
 
